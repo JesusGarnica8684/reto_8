@@ -1,9 +1,46 @@
 # Reto 8
 
 1. De los retos anteriores selecione 3 funciones y escribalas en forma de lambdas.
-2. De los retos anteriores selecione 3 funciones y escribalas con argumentos no definidos (*args).
-3. Escriba una función recursiva para calcular la operación de la potencia.
-4. Utilice la siguiente plantilla de code para contar el tiempo:
+* Código para calcular el volumen total y area total de la siguiente figura:
+![image](https://github.com/user-attachments/assets/8300fa43-7ae4-494d-9cff-82b22d296726)
+```python
+from math import pi, sqrt #se trae de la libreria math especificamente los dos modulos que serán utilizados
+
+if __name__=="__main__":
+    #se ingresan por teclado las dimensiones de las figuras 
+    radioE = float(input("Ingrese el radio de la esfera. "))
+    radioC = float(input("Ingrese el radio de la base del cono. "))
+    alturaC = float(input("Ingrese la altura del cono. "))
+    #calcular_sólidos 
+    calc_earea = (lambda r1: 4*pi*(r1**2))(radioE) #area de la esfera 
+    calc_evol = (lambda r1: 4/3*pi*(r1**2))(radioE) #volumen de la esfera
+    calc_gcono = (lambda r2, h: sqrt((r2**2)+(h**2)))(radioC, alturaC) #geriatriz del cono
+    calc_carea = (lambda r2, gc : pi*r2*(r2+gc))(radioC, calc_gcono) #area del cono
+    calc_cvol = (lambda r2, h: 1/3*pi*(r2**2)*h)(radioC, alturaC) #volumen del cono
+    a_total = (lambda a1, a2: a1 + a2)(calc_carea, calc_earea)
+    v_total = (lambda a1, a2: a1 + a2)(calc_cvol, calc_evol)
+
+    print("El area total de los sólidos es: ", a_total, "\nEl volumen total de los sólidos es: ", v_total)
+
+```
+* Código para calcular cantidad de carne de gallinas, gallos y pollitos.
+```python
+if __name__=="__main__":
+    nGallinas = int(input("Ingrese el número de gallinas que tiene: "))
+    nGallos = int(input("Ingrese el número de gallos que tiene: "))
+    nPollitos = int(input("Ingrese el número de pollitos que tiene: "))
+    carGallina = (lambda n: n*6)(nGallinas)
+    carGallo = (lambda n: n*7)(nGallos)
+    carPollito = (lambda n: n*1)(nPollitos)
+    print ("Para un numero de ", nGallinas, " gallinas, hay una cantidad de carne de ", carGallina,"Kg")
+    print ("Para un numero de ", nGallos, " gallos, hay una cantidad de carne de ", carGallo,"Kg")
+    print ("Para un numero de ", nPollitos, " pollitos, hay una cantidad de carne de ", carPollito,"Kg")
+```
+*
+
+3. De los retos anteriores selecione 3 funciones y escribalas con argumentos no definidos (*args).
+4. Escriba una función recursiva para calcular la operación de la potencia.
+5. Utilice la siguiente plantilla de code para contar el tiempo:
 ```python
 import time
 
