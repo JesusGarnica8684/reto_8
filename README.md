@@ -49,7 +49,7 @@ if __name__ == "__main__":
     print("El valor final del préstamo después de ", meses ," meses es: ", valorFinal)
 ```
 
-3. De los retos anteriores selecione 3 funciones y escribalas con argumentos no definidos (*args).
+2. De los retos anteriores selecione 3 funciones y escribalas con argumentos no definidos (*args).
 
 ```python
 import math
@@ -101,7 +101,7 @@ if __name__ == "__main__":
     print("Promedio multiplicativo de ", numA, numB , numC, numD, numE, " = ", (promedio_multiplicativo(numA, numB, numC, numD, numE)))
 ```
 
-5. Escriba una función recursiva para calcular la operación de la potencia.
+3. Escriba una función recursiva para calcular la operación de la potencia.
 ```python
 def potencia_recursiva(n: int, p: int) -> int:
     # en caso de la potencia ser a la cero se pone el caso base
@@ -118,7 +118,7 @@ if __name__=="__main__":
     print (potencia)
     print (base**exponente) #linea de comprobacion de resultados 
 ```
-7. Utilice la siguiente plantilla de code para contar el tiempo:
+4. Utilice la siguiente plantilla de code para contar el tiempo:
 ```python
 import time
 
@@ -133,6 +133,7 @@ print(timer)
 Realice pruebas para calcular fibonacci con iteración o con recursión. Determine desde que número de la serie la diferencia de tiempo se vuelve significativa.
 **Importante:** Revisar este [hilo](https://stackoverflow.com/questions/8220801/how-to-use-timeit-module).
 
-5. Crear cuenta en [stackoverflow](https://stackoverflow.com/) y adjuntar imagen en el repo
+5. Imagen cuenta stackoverflow:
+   
 
-6. Cosas de adultos....ir a [linkedin](https://www.linkedin.com/) y crear perfil....NO IMPORTA que estén iniciando, si tienen tiempo para redes poco útiles como fb, insta, o tiktok tienen tiempo para crear un perfil mamalón. Dejar enlace en el repo.
+6. Perfil [linkedin](www.linkedin.com/in/laura-mariana-de-jesús-garcía-garnica-69828534a).
