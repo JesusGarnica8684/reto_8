@@ -135,5 +135,6 @@ Realice pruebas para calcular fibonacci con iteración o con recursión. Determi
 
 5. Imagen cuenta stackoverflow:
    
+![image](https://github.com/JesusGarnica8684/reto_8/blob/main/Cuenta-stackoverflow.png)
 
 6. Perfil [linkedin](www.linkedin.com/in/laura-mariana-de-jesús-garcía-garnica-69828534a).
