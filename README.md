@@ -49,9 +49,76 @@ if __name__ == "__main__":
     print("El valor final del préstamo después de ", meses ," meses es: ", valorFinal)
 ```
 
-3. De los retos anteriores selecione 3 funciones y escribalas con argumentos no definidos (*args).
-4. Escriba una función recursiva para calcular la operación de la potencia.
-5. Utilice la siguiente plantilla de code para contar el tiempo:
+2. De los retos anteriores selecione 3 funciones y escribalas con argumentos no definidos (*args).
+
+```python
+import math
+
+def promedio(*args) -> float:
+    sum : float = 0 # se separa la suma en una variable que se inicializa en 0
+    count : int = 0 # contador de cantidad de argumentos que ingresaron  
+    for num in args: 
+        sum += num # se suma hasta completar todos los argumentos 
+        count += 1 
+    prom = sum / count # se divide la suma sobre los argumentos contados 
+    return prom
+
+def raiz_tres(*args) -> float:
+    menor = min(args)
+    raiz_cubica = menor ** (1/3)
+    return raiz_cubica
+
+def promedio_multiplicativo(*args) -> float:
+    por : float = 1 # se separa la multiplicación de los números en una variable inicializada en 1
+    count : int = 0 # contador de cantidad de argumentos que ingresaron  
+    for num in args: 
+        por *= num # se multiplica hasta completar todos los argumentos 
+        count += 1 
+    prom_multi = math.pow(por, 1/count) # Calcular la raíz según el contador 
+    return prom_multi
+
+if __name__ == "__main__":
+
+    numA = int(input("Ingrese numero a: "))
+    numB = int(input("Ingrese numero b: "))
+    numC = int(input("Ingrese numero c: "))
+    numD = int(input("Ingrese numero d: "))
+    numE = int(input("Ingrese numero e: "))
+#promedio 
+    print("Promedio de ", numA, numB, " = ", (promedio(numA, numB)))
+    print("Promedio de ", numA, numB , numC, " = ", (promedio(numA, numB, numC)))
+    print("Promedio de ", numA, numB , numC, numD, " = ", (promedio(numA, numB, numC, numD)))
+    print("Promedio de ", numA, numB , numC, numD, numE, " = ", (promedio(numA, numB, numC, numD, numE)))
+#raíz cúbica del menor numero
+    print("Raiz cubica del menor numero entre ", numA, numB, " = ", (raiz_tres(numA, numB)))
+    print("Raiz cubica del menor numero entre ", numA, numB , numC, " = ", (raiz_tres(numA, numB, numC)))
+    print("Raiz cubica del menor numero entre ", numA, numB , numC, numD, " = ", (raiz_tres(numA, numB, numC, numD)))
+    print("Raiz cubica del menor numero entre ", numA, numB , numC, numD, numE, " = ", (raiz_tres(numA, numB, numC, numD, numE)))
+#promedio multiplicativo
+    print("Promedio multiplicativo de ", numA, numB, " = ", (promedio_multiplicativo(numA, numB)))
+    print("Promedio multiplicativo de ", numA, numB , numC, " = ", (promedio_multiplicativo(numA, numB, numC)))
+    print("Promedio multiplicativo de ", numA, numB , numC, numD, " = ", (promedio_multiplicativo(numA, numB, numC, numD)))
+    print("Promedio multiplicativo de ", numA, numB , numC, numD, numE, " = ", (promedio_multiplicativo(numA, numB, numC, numD, numE)))
+```
+
+3. Escriba una función recursiva para calcular la operación de la potencia.
+```python
+def potencia_recursiva(n: int, p: int) -> int:
+    # en caso de la potencia ser a la cero se pone el caso base
+    if p == 0:
+        return 1
+    # se organiza el caso recursivo como n^p = n * n^(p-1)
+    # se puede entender como que cada vez que la función se llama a si misma se multiplica con su potencia anterior
+    return n * potencia_recursiva(n, p - 1)
+
+if __name__=="__main__":
+    base = int(input("Ingrese la base a potenciar: "))
+    exponente = int(input("Ingrese el exponente: "))
+    potencia = potencia_recursiva(base, exponente)
+    print (potencia)
+    print (base**exponente) #linea de comprobacion de resultados 
+```
+4. Utilice la siguiente plantilla de code para contar el tiempo:
 ```python
 import time
 
@@ -66,6 +133,7 @@ print(timer)
 Realice pruebas para calcular fibonacci con iteración o con recursión. Determine desde que número de la serie la diferencia de tiempo se vuelve significativa.
 **Importante:** Revisar este [hilo](https://stackoverflow.com/questions/8220801/how-to-use-timeit-module).
 
-5. Crear cuenta en [stackoverflow](https://stackoverflow.com/) y adjuntar imagen en el repo
+5. Imagen cuenta stackoverflow:
+   
 
-6. Cosas de adultos....ir a [linkedin](https://www.linkedin.com/) y crear perfil....NO IMPORTA que estén iniciando, si tienen tiempo para redes poco útiles como fb, insta, o tiktok tienen tiempo para crear un perfil mamalón. Dejar enlace en el repo.
+6. Perfil [linkedin](www.linkedin.com/in/laura-mariana-de-jesús-garcía-garnica-69828534a).
