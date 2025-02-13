@@ -142,9 +142,10 @@ def fibonacci(n: int) -> int:
         return 0
     elif n == 1:
         return 1
-    a, b = 0, 1
+    a, b = 0, 1 # se inicializa las variables a y b con los valores f(0)=0 y f(1)=1
     for _ in range(2, n + 1):#no se va utilizar el indice de for, asi que el guion le pide al codigo que lo ignore
-        a, b = b, a + b
+        # la formula de fibonacci es igual a f(n) = f(n−1) + f(n−2)       
+        a, b = b, a + b # a y b se actualizan para calcular el siguiente número de Fibonacci
     return b #valor de fibonacci en la posición n
 
 if __name__=="__main__":
