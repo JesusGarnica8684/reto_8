@@ -133,7 +133,27 @@ print(timer)
 Realice pruebas para calcular fibonacci con iteración o con recursión. Determine desde que número de la serie la diferencia de tiempo se vuelve significativa.
 **Importante:** Revisar este [hilo](https://stackoverflow.com/questions/8220801/how-to-use-timeit-module).
 
+```python
+import timeit 
+
+def fibonacci(n: int) -> int:
+    #calcula el número de Fibonacci en la posición n
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    a, b = 0, 1
+    for _ in range(2, n + 1):#no se va utilizar el indice de for, asi que el guion le pide al codigo que lo ignore
+        a, b = b, a + b
+    return b #valor de fibonacci en la posición n
+
+if __name__=="__main__":
+    tiempo = timeit.repeat("fibonacci(35)", "from __main__ import fibonacci", number=100000)
+    print(tiempo)
+```
+
 5. Imagen cuenta stackoverflow:
    
+![image](https://github.com/JesusGarnica8684/reto_8/blob/main/Cuenta-stackoverflow.png)
 
 6. Perfil [linkedin](www.linkedin.com/in/laura-mariana-de-jesús-garcía-garnica-69828534a).
